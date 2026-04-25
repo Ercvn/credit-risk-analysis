@@ -35,3 +35,17 @@ Kaggle'dan alınan [Credit Risk Dataset](https://www.kaggle.com/datasets/laotse/
 * **Problem:** Regresyon modeli kurularak müşteriye ne kadar kredi verileceği tahmin edilmek istendi. İlk model $R^2 = 1.00$ gibi kusursuz ve gerçek dışı bir skor üretti.
 * **Aksiyon (Analitik Şüphecilik):** Yapılan incelemede, veri seti içindeki `loan_percent_income` (Kredinin Gelire Oranı) sütununun, hedef değişkene giden formülün bir parçası olduğu tespit edildi. Modelin "kopya çekmesine" neden olan bu Veri Sızıntısı (Data Leakage) engellendi ve sorunlu özellik (feature) veri setinden atıldı.
 * **Sonuç:** Model gerçek dünya şartlarına uygun hale getirildi ve sadece demografik özelliklere bakarak, kabul edilebilir bir hata payı ($R^2 = 0.26$, MAE = $3885) ile algoritmik limit tahmini yapmayı başardı.
+
+---
+
+## 💻 Nasıl Çalıştırılır?
+
+1. Projeyi bilgisayarınıza klonlayın:
+   ```bash
+   git clone [https://github.com/Ercvn/credit-risk-analysis.git](https://github.com/Ercvn/credit-risk-analysis.git)
+
+2. Gerekli kütüphaneleri yükleyin:
+   ```bash
+   pip install pandas numpy matplotlib seaborn scikit-learn
+
+3. credit_risk_dataset.csv dosyasını ana dizine ekleyin ve Jupyter Notebook (.ipynb) dosyasını çalıştırın.
